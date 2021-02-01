@@ -1,3 +1,44 @@
+body {
+  padding: 0;
+  background-color: #FAFAFF !important;
+}
 
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar {
+  background-color: #FAFAFF !important;
+  padding-left: 3vw;
+  padding-right: 3vw;
+}
+.navbar img {
+  width: 175px;
+}
+.navbar p {
+  margin-bottom: 0;
+  position: absolute;
+  left: 280px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #525251;
+}
+
+.navbar-nav {
+  font-size: 20px;
+  font-weight: 800;
+}
+.navbar-nav li {
+  line-height: 1em;
+}
+.navbar-nav a {
+  color: black !important;
+}
+.navbar-nav .active {
+  color: #975E7C !important;
+}
+.navbar-nav a:hover {
+  color: #B88EA5 !important;
+}
 
 /*# sourceMappingURL=style.css.map */
