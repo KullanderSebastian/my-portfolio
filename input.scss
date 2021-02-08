@@ -12,11 +12,13 @@ $logoWidth: 175px;
 //font sizes: 16, 18, 20, 24, 30, 36, 42, 48, 60, 72
 $primaryFont: 'Montserrat', sans-serif;
 
-
+//others
+$pageOuterWidthPadding: 5vw;
 
 body {
     padding: 0;
-    background-color: $ghostWhite!important;
+    //background-color: $ghostWhite!important;
+    background: linear-gradient(90deg, $ghostWhite 50%, $titaniumYellow 50%);
 }
 
 * {
@@ -24,9 +26,11 @@ body {
 }
 
 .navbar {
-    background-color: $ghostWhite!important;
-    padding-left: 3vw;
-    padding-right: 3vw;
+    //background-color: $ghostWhite!important;
+    background: linear-gradient(90deg, $ghostWhite 50%, $titaniumYellow 50%);
+    padding-left: calc(#{$pageOuterWidthPadding} - 5px);
+    padding-right: $pageOuterWidthPadding;
+    padding-top: 20px;
 
     img {
         width: $logoWidth;
@@ -60,5 +64,32 @@ body {
 
     a:hover {
         color: $secondaryEnglishLavender!important;
+    }
+}
+
+.container-fluid {
+    padding-left: $pageOuterWidthPadding;
+    padding-right: $pageOuterWidthPadding;
+    margin-top: 60px;
+
+    h1 {
+        font-size: 72px;
+        font-weight: 700;
+        color: $englishLavender;
+        margin-bottom: 40px;
+    }
+
+    p {
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    img {
+        width: 300px;
+        border-radius: 50%;
+        box-shadow: 0 8px 6px -6px black;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
     }
 }
