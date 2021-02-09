@@ -18,91 +18,88 @@ $pageOuterWidthPadding: 5vw;
 body {
     padding: 0;
     //background-color: $ghostWhite!important;
-    background: linear-gradient(90deg, $ghostWhite 50%, $titaniumYellow 50%);
+    //background: linear-gradient(90deg, $ghostWhite 50%, $titaniumYellow 50%);
 }
 
 * {
     font-family: $primaryFont;
 }
 
-.navbar {
-    //background-color: $ghostWhite!important;
-    background: linear-gradient(90deg, $ghostWhite 50%, $titaniumYellow 50%);
-    padding-left: calc(#{$pageOuterWidthPadding} - 5px);
-    padding-right: $pageOuterWidthPadding;
-    padding-top: 20px;
+.index {
+    .desktop-left-column {
+        background-color: $ghostWhite;
+        padding-left: $pageOuterWidthPadding;
+        padding-right: $pageOuterWidthPadding;
 
-    img {
-        width: $logoWidth;
+        h1 {
+            font-size: 72px;
+            font-weight: 700;
+            color: $englishLavender;
+            margin-bottom: 40px;
+            margin-top: 60px;
+        }
+
+        p {
+            font-size: 30px;
+            font-weight: 500;
+        }
+
+        nav {
+            img {
+                width: $logoWidth;
+                margin-left: -1.9vw;
+
+            }
+
+            p {
+                display: inline-block;
+                padding-left: 5%;
+                font-size: 16px;
+                font-weight: 500;
+                color: $textColor;
+            }
+        }
     }
 
-    p {
-        margin-bottom: 0;
-        position: absolute;
-        left: 280px;
-        font-size: 16px;
-        font-weight: 500;
-        color: $textColor;
+    .desktop-right-column {
+        background-color: $titaniumYellow;
+        padding-left: $pageOuterWidthPadding;
+        padding-right: $pageOuterWidthPadding;
+        height: 100vh;
+
+        .myself {
+            width: 300px;
+            border-radius: 50%;
+            box-shadow: 0 8px 6px -6px black;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        .navbar-nav {
+            font-size: 20px;
+            font-weight: 800;
+            padding-top: 33px;
+            float: right;
+
+            li {
+                line-height: 1em;
+            }
+
+            a {
+                color: black;
+            }
+
+            .active {
+                color: $englishLavender;
+            }
+
+            a:hover {
+                color: $secondaryEnglishLavender;
+            }
+        }
     }
-}
-
-.navbar-nav {
-    font-size: 20px;
-    font-weight: 800;
-
-    li {
-        line-height: 1em;
-    }
-
-    a {
-        color: black!important;
-    }
-
-    .active {
-        color: $englishLavender!important;
-    }
-
-    a:hover {
-        color: $secondaryEnglishLavender!important;
-    }
-}
-
-.container-fluid {
-    padding-left: $pageOuterWidthPadding;
-    padding-right: $pageOuterWidthPadding;
-    margin-top: 60px;
-
-    h1 {
-        font-size: 72px;
-        font-weight: 700;
-        color: $englishLavender;
-        margin-bottom: 40px;
-    }
-
-    p {
-        font-size: 30px;
-        font-weight: 500;
-    }
-
-    .myself {
-        width: 300px;
-        border-radius: 50%;
-        box-shadow: 0 8px 6px -6px black;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-    }
-
-    .boxinggloves {
-        width: 150px;
-    }
-}
-
-.transition-fade {
-    transition: 0.5s;
-    opacity: 1;
-}
-
-html.is-animating .transition-fade {
-    opacity: 0;
 }

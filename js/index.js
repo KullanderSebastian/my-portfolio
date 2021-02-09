@@ -1,4 +1,4 @@
-const swup = new Swup();
+/*const swup = new Swup();
 
 var links = document.getElementsByClassName("nav-link");
 
@@ -9,4 +9,4 @@ for (var i = 0; i < links.length; i++) {
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
   });
-}
+}*/

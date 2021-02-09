@@ -1,81 +1,72 @@
 body {
   padding: 0;
-  background: linear-gradient(90deg, #FAFAFF 50%, #F0E100 50%);
 }
 
 * {
   font-family: "Montserrat", sans-serif;
 }
 
-.navbar {
-  background: linear-gradient(90deg, #FAFAFF 50%, #F0E100 50%);
-  padding-left: calc(5vw - 5px);
-  padding-right: 5vw;
-  padding-top: 20px;
-}
-.navbar img {
-  width: 175px;
-}
-.navbar p {
-  margin-bottom: 0;
-  position: absolute;
-  left: 280px;
-  font-size: 16px;
-  font-weight: 500;
-  color: #525251;
-}
-
-.navbar-nav {
-  font-size: 20px;
-  font-weight: 800;
-}
-.navbar-nav li {
-  line-height: 1em;
-}
-.navbar-nav a {
-  color: black !important;
-}
-.navbar-nav .active {
-  color: #975E7C !important;
-}
-.navbar-nav a:hover {
-  color: #B88EA5 !important;
-}
-
-.container-fluid {
+.index .desktop-left-column {
+  background-color: #FAFAFF;
   padding-left: 5vw;
   padding-right: 5vw;
-  margin-top: 60px;
 }
-.container-fluid h1 {
+.index .desktop-left-column h1 {
   font-size: 72px;
   font-weight: 700;
   color: #975E7C;
   margin-bottom: 40px;
+  margin-top: 60px;
 }
-.container-fluid p {
+.index .desktop-left-column p {
   font-size: 30px;
   font-weight: 500;
 }
-.container-fluid .myself {
+.index .desktop-left-column nav img {
+  width: 175px;
+  margin-left: -1.9vw;
+}
+.index .desktop-left-column nav p {
+  display: inline-block;
+  padding-left: 5%;
+  font-size: 16px;
+  font-weight: 500;
+  color: #525251;
+}
+.index .desktop-right-column {
+  background-color: #F0E100;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  height: 100vh;
+}
+.index .desktop-right-column .myself {
   width: 300px;
   border-radius: 50%;
   box-shadow: 0 8px 6px -6px black;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
-.container-fluid .boxinggloves {
-  width: 150px;
+.index .desktop-right-column .navbar-nav {
+  font-size: 20px;
+  font-weight: 800;
+  padding-top: 33px;
+  float: right;
 }
-
-.transition-fade {
-  transition: 0.5s;
-  opacity: 1;
+.index .desktop-right-column .navbar-nav li {
+  line-height: 1em;
 }
-
-html.is-animating .transition-fade {
-  opacity: 0;
+.index .desktop-right-column .navbar-nav a {
+  color: black;
+}
+.index .desktop-right-column .navbar-nav .active {
+  color: #975E7C;
+}
+.index .desktop-right-column .navbar-nav a:hover {
+  color: #B88EA5;
 }
 
 /*# sourceMappingURL=style.css.map */
