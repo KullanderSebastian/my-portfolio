@@ -1,45 +1,56 @@
 body {
   padding: 0;
+  background-color: #FAFAFF;
 }
 
 * {
   font-family: "Montserrat", sans-serif;
 }
 
-.index .desktop-left-column {
+.desktop-left-column {
   background-color: #FAFAFF;
   padding-left: 5vw;
   padding-right: 5vw;
 }
-.index .desktop-left-column h1 {
+.desktop-left-column h1 {
   font-size: 72px;
   font-weight: 700;
   color: #975E7C;
   margin-bottom: 40px;
   margin-top: 60px;
 }
-.index .desktop-left-column p {
+.desktop-left-column p {
   font-size: 30px;
   font-weight: 500;
 }
-.index .desktop-left-column nav img {
+.desktop-left-column nav img {
   width: 175px;
   margin-left: -1.9vw;
 }
-.index .desktop-left-column nav p {
+.desktop-left-column nav p {
   display: inline-block;
   padding-left: 5%;
   font-size: 16px;
   font-weight: 500;
   color: #525251;
 }
-.index .desktop-right-column {
+
+.desktop-right-column {
   background-color: #F0E100;
   padding-left: 5vw;
   padding-right: 5vw;
+  overflow: auto;
   height: 100vh;
 }
-.index .desktop-right-column .myself {
+.desktop-right-column p {
+  font-size: 30px;
+  font-weight: 500;
+  color: #FAFAFF;
+}
+.desktop-right-column .text-content {
+  margin-top: 45%;
+}
+.desktop-right-column .myself {
   width: 300px;
   border-radius: 50%;
   box-shadow: 0 8px 6px -6px black;
@@ -50,23 +61,59 @@ body {
   right: 0;
   margin: auto;
 }
-.index .desktop-right-column .navbar-nav {
+.desktop-right-column .boxinggloves {
+  width: 100px;
+}
+.desktop-right-column .navbar-nav {
   font-size: 20px;
   font-weight: 800;
   padding-top: 33px;
   float: right;
 }
-.index .desktop-right-column .navbar-nav li {
+.desktop-right-column .navbar-nav li {
   line-height: 1em;
 }
-.index .desktop-right-column .navbar-nav a {
+.desktop-right-column .navbar-nav a {
   color: black;
 }
-.index .desktop-right-column .navbar-nav .active {
+.desktop-right-column .navbar-nav .active {
   color: #975E7C;
 }
-.index .desktop-right-column .navbar-nav a:hover {
+.desktop-right-column .navbar-nav a:hover {
   color: #B88EA5;
+  transition: 0.2s;
+}
+
+.about .desktop-right-column {
+  background-color: #F28123;
+}
+.about .navbar-nav a {
+  color: white;
+}
+.about .navbar-nav .active {
+  color: #F0E100;
+}
+.about .navbar-nav a:hover {
+  color: #FFF570;
+  transition: 0.2s;
+}
+
+.transition-fade-translate {
+  transition: 0.5s;
+  transform: translateX(0);
+}
+
+html.is-animating .transition-fade-translate {
+  transform: translateX(55vw);
+}
+
+.transition-fade-opacity {
+  transition: 0.5s;
+  opacity: 1;
+}
+
+html.is-animating .transition-fade-opacity {
+  opacity: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

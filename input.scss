@@ -1,5 +1,6 @@
 $princetonOrange: #F28123;
 $titaniumYellow: #F0E100;
+$secondaryTitaniumYellow: #FFF570;
 $englishLavender: #975E7C;
 $secondaryEnglishLavender: #B88EA5;
 $ghostWhite: #FAFAFF;
@@ -17,7 +18,7 @@ $pageOuterWidthPadding: 5vw;
 
 body {
     padding: 0;
-    //background-color: $ghostWhite!important;
+    background-color: $ghostWhite;
     //background: linear-gradient(90deg, $ghostWhite 50%, $titaniumYellow 50%);
 }
 
@@ -25,81 +26,140 @@ body {
     font-family: $primaryFont;
 }
 
-.index {
-    .desktop-left-column {
-        background-color: $ghostWhite;
-        padding-left: $pageOuterWidthPadding;
-        padding-right: $pageOuterWidthPadding;
+.desktop-left-column {
+    background-color: $ghostWhite;
+    padding-left: $pageOuterWidthPadding;
+    padding-right: $pageOuterWidthPadding;
 
-        h1 {
-            font-size: 72px;
-            font-weight: 700;
-            color: $englishLavender;
-            margin-bottom: 40px;
-            margin-top: 60px;
+    h1 {
+        font-size: 72px;
+        font-weight: 700;
+        color: $englishLavender;
+        margin-bottom: 40px;
+        margin-top: 60px;
+    }
+
+    p {
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    nav {
+        img {
+            width: $logoWidth;
+            margin-left: -1.9vw;
+
         }
 
         p {
-            font-size: 30px;
+            display: inline-block;
+            padding-left: 5%;
+            font-size: 16px;
             font-weight: 500;
-        }
-
-        nav {
-            img {
-                width: $logoWidth;
-                margin-left: -1.9vw;
-
-            }
-
-            p {
-                display: inline-block;
-                padding-left: 5%;
-                font-size: 16px;
-                font-weight: 500;
-                color: $textColor;
-            }
+            color: $textColor;
         }
     }
+}
 
+.desktop-right-column {
+    background-color: $titaniumYellow;
+    padding-left: $pageOuterWidthPadding;
+    padding-right: $pageOuterWidthPadding;
+    overflow: auto;
+    height: 100vh;
+
+    p {
+        font-size: 30px;
+        font-weight: 500;
+        color: $ghostWhite;
+    }
+
+    .text-content {
+        margin-top: 45%;
+    }
+
+    .myself {
+        width: 300px;
+        border-radius: 50%;
+        box-shadow: 0 8px 6px -6px black;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .boxinggloves {
+        width: 100px;
+    }
+
+    .navbar-nav {
+        font-size: 20px;
+        font-weight: 800;
+        padding-top: 33px;
+        float: right;
+        //position: fixed;
+        //right: calc(5vw - 30px);
+        //background-color: $englishLavender;
+        //padding-right: 30px;
+        //padding-left: 30px;
+        //padding-bottom: 25px;
+
+        li {
+            line-height: 1em;
+        }
+
+        a {
+            color: black;
+        }
+
+        .active {
+            color: $englishLavender;
+        }
+
+        a:hover {
+            color: $secondaryEnglishLavender;
+            transition: 0.2s;
+        }
+    }
+}
+
+.about {
     .desktop-right-column {
-        background-color: $titaniumYellow;
-        padding-left: $pageOuterWidthPadding;
-        padding-right: $pageOuterWidthPadding;
-        height: 100vh;
+        background-color: $princetonOrange;
+    }
 
-        .myself {
-            width: 300px;
-            border-radius: 50%;
-            box-shadow: 0 8px 6px -6px black;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
+    .navbar-nav {
+        a {
+            color: white;
         }
 
-        .navbar-nav {
-            font-size: 20px;
-            font-weight: 800;
-            padding-top: 33px;
-            float: right;
+        .active {
+            color: $titaniumYellow;
+        }
 
-            li {
-                line-height: 1em;
-            }
-
-            a {
-                color: black;
-            }
-
-            .active {
-                color: $englishLavender;
-            }
-
-            a:hover {
-                color: $secondaryEnglishLavender;
-            }
+        a:hover {
+            color: $secondaryTitaniumYellow;
+            transition: 0.2s;
         }
     }
+}
+
+.transition-fade-translate {
+    transition: 0.5s;
+    transform: translateX(0);
+}
+
+html.is-animating .transition-fade-translate {
+    transform: translateX(55vw);
+}
+
+.transition-fade-opacity {
+    transition: 0.5s;
+    opacity: 1;
+}
+
+html.is-animating .transition-fade-opacity {
+    opacity: 0;
 }
